@@ -2,6 +2,8 @@ package com.udemy.myfirstapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import java.io.FileReader
+import java.io.FileWriter
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,10 +51,53 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            var max = if(5>1) 5 else 1
+            var max = if(5 > 1) 5 else 1
 
+            for(item in 1..5) {
 
+            }
+
+            var title = "Mi titulo"
+            print(title[0]);
+            print(title.split(" "));
+
+            var arrayInt = Array<Int>(5){0};
+
+            var map = hashMapOf<Int,String>(1 to "angel", 2 to "reyes")
+            print(map.get(3))
+            print(map[3])
+
+            var arr = arrayOf(1,10,3,5)
+            var list = listOf<Int>(1,2,3,4,5)
+
+            //Set es inmutable
+            var setElement = setOf<Int>(1,2,3,4,5)
+            var setMutableElement = mutableSetOf<Int>(1,2,3,4,5)
+
+            fun writeToFile(str:String) {
+                var fo = FileWriter("test.txt",true)
+                fo.write(str)
+                fo.close();
+            }
+
+            fun readToFile() {
+                var fo = FileReader("test.txt")
+                var c:Int?
+                do {
+                    c = fo.read();
+                    print(c.toChar())
+                }
+                fo.close()
+            }
         }
+
+        inner class Singleton {
+            companion object {
+                val instance:Singleton by lazy { Singleton() }
+            }
+        }
+
+        var s1 = Singleton.instance
 
     }
 }
