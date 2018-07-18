@@ -13,12 +13,16 @@
         android:layout_height="match_parent">
 
         <Button
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="10px"
             android:id="@+id/button"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:onClick="clicked" />
 
         <Button
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="10px"
             android:id="@+id/button2"
             android:layout_width="40pt"
             android:layout_height="40pt"
@@ -38,12 +42,16 @@
         android:layout_height="match_parent">
 
         <Button
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="10px"
             android:id="@+id/button4"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:onClick="clicked" />
 
         <Button
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="10px"
             android:id="@+id/button5"
             android:layout_width="40pt"
             android:layout_height="40pt"
@@ -62,12 +70,16 @@
         android:layout_height="match_parent">
 
         <Button
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="10px"
             android:id="@+id/button7"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:onClick="clicked" />
 
         <Button
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="10px"
             android:id="@+id/button8"
             android:layout_width="40pt"
             android:layout_height="40pt"
