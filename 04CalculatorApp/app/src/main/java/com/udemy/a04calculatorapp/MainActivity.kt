@@ -15,16 +15,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        editText.setText("sadas")
+        editText.setText("")
     }
 
     fun numberClicked(view: View) {
         val selected = view as Button
         var number: String = editText.text.toString()
-        //if(isNewOperation) {
-            var s = ""
-            editText.setText(s)
-        //}
+        if(isNewOperation) {
+            editText.setText("")
+            number = ""
+        }
         isNewOperation = false
 
         when(selected.id) {
