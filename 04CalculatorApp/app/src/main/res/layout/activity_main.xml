@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/button"
+                android:onClick="clean"
                 android:text="AC" />
 
             <Button
@@ -59,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/button"
+                android:onClick="percent"
                 android:text="%" />
 
             <Button

@@ -15,16 +15,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        editText.setText("sadas")
+        editText.setText("")
     }
 
     fun numberClicked(view: View) {
         val selected = view as Button
         var number: String = editText.text.toString()
-        //if(isNewOperation) {
-            var s = ""
-            editText.setText(s)
-        //}
+        if(isNewOperation) {
+            editText.setText("")
+        }
         isNewOperation = false
 
         when(selected.id) {
@@ -78,6 +77,7 @@ class MainActivity : AppCompatActivity() {
             buttonMinus.id -> { operation = "-" }
         }
         oldNumbers = editText.text.toString()
+        editText.setText("")
         isNewOperation = true
     }
 
@@ -99,6 +99,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
         editText.setText(finalNumber.toString())
+        isNewOperation = true
+    }
+
+    fun percent(view: View) {
+        val number = editText.text.toString().toDouble()/100
+        editText.setText(number.toString())
+        isNewOperation = true
+    }
+
+    fun clean(view: View) {
+        editText.setText(("0"))
         isNewOperation = true
     }
 }
