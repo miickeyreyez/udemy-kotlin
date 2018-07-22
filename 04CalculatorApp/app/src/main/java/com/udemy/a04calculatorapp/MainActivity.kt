@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         var number: String = editText.text.toString()
         if(isNewOperation) {
             editText.setText("")
+            //number = ""
         }
         isNewOperation = false
 
